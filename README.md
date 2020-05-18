@@ -46,3 +46,15 @@ Exibindo como a tabela foi criada
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci |
 ```
 
+# Padrão de tabelas Laravel
+
+## Padrão de criação de tabelas do Laravel
+
+Quando o padrão de nomes das *migrations* é diferente do *model*
+
+```
+class Alocacao extends Model
+{
+    protected $table = 'alocacoes';
+}
+```

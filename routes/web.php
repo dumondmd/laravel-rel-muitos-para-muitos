@@ -76,3 +76,11 @@ Route::get('/alocar', function() {
 		$proj->desenvolvedores()->attach([2=>['horas_semanais'=>20],3=>['horas_semanais'=>30],]);
 	}
 });
+
+Route::get('/desalocar', function() {
+	$proj = Projeto::find(4);
+	if(isset($proj)){
+		//$proj->desenvolvedores()->attach(1, ['horas_semanais'=>50]);
+		$proj->desenvolvedores()->detach([1,2,3]);
+	}
+});
